@@ -625,13 +625,14 @@
           success: (data)=>{
               debugger
               const events = data.data.events;
+              // TO ADD BELOW CODE FOR ADD EVENTS TO DOM ELEMENTS
           },
           dataType:"json"
       });
   });
   // delete event
   $('.btn-delete-event').on('click',(e)=>{ // TO CREATE BTN(ADMIN) FOR DELETE EVENT
-    const title = $(".input-title").val(); // TO CREATE INPUT FOR TITLE
+    const id = $("input").val(); // TO CREATE INPUT FOR TITLE
     $.ajax({
           type: "POST",
           url: "addEvent/",
